@@ -1,50 +1,89 @@
-let alabama = ["guld shores", "orange beach", "guntersville"]
-let alaska = ["kenai", "kodiak", "fairbanks"]
-let arizona = ["mesa", "flagstaff", "tempe"]
-let arkansas = ["hot springs", "fort smith", "fayetteville"]
-let california = ["bakersfield", "irvine", "burbank"]
-let colorado = ["grand junction", "durango", "aurora"]
-let connecticut = ["bridgeport", "new haven", "waterbury"]
-let delaware = ["new castle", "wilmington", "newark"]
-let florida = ["fort pierce", "pompano beach", "boynton beach"]
-let georgia = ["athens", "augusta", "macin"]
-let hawaii = ["hawi", "hilo", "kailua"]
-let idaho = ["boise", "nampa", "meridian"]
-let illinois = ["naperville", "rockford", "springfield"]
-let indiana = ["notre dame", "fort wayne", "evansville"]
-let iowa = ["dubuque", "cedar rapids", "davenport"]
-let kansas = ["wichita", "overland park", "topeka"]
-let kentucky = ["louisville", "lexington", "owensboro"]
-let louisiana = ["lake charles", "layfayette", "shreveport"]
-let maine = ["freeport", "lewiston", "bangor"]
-let maryland = ["silver spring", "rockville", "ocean city"]
-let massachusetts = ["peabody", "worchester", "new bedford"]
-let michigan = ["traverse city", "lansig", "warren"]
-let minnesota = ["st. cloud", "saint paul", "duluth"]
-let mississippi = ["biloxi", "gulfport", "hattiesburg"]
-let missouri = ["branson", "saint joseph", "jefferson city"]
-let montana = ["billings", "great falls", "missoula"]
-let nebraska = ["omaha", "lincoln", "bellevue"]
-let nevada = ["laughlin", "henderson", "reno"]
-let new_hampshire = ["mancester", "nashua", "portsmouth"]
-let new_jersey = ["newark", "paterson", "atlantic city"]
-let new_mexico = ["albuquerque", "silver city ", "roswell"]
-let new_york = ["mount vernon", "harrison", "lindenhurst"]
-let north_carolina = ["asheville", "greensboro", "chapel hill"]
-let north_dakota = ["fargo", "bismark", "grand forks"]
-let ohio = ["dayton", "akron", "toledo"]
-let oklahoma = ["tulsa", "norman", "edmond"]
-let oregon = ["salem", "eugene", "bend"]
-let pennsylvania = ["harrisburg", "lancaster", "bethlehem"]
-let rhode_island = ["newport", "pawtucket", "warwick"]
-let south_carolina = ["clemson", "myrtle beach", "greenville"]
-let south_dakota = ["sioux falls", "rapid city", "pierre"]
-let tennessee = ["knoxville", "chattanooga", "gatlinburg"]
-let texas = ["plano", "mcallen", "amarillo"]
-let utah = ["cedar city", "provo", "moab"]
-let vermont = ["burlington", "stowe", "rutland"]
-let virginia = ["hampton", "lynchburg", "fairfaz"]
-let washington = ["spokane", "everett", "bellevue"]
-let west_virginia = ["morgantown", "martinsburg", "beckley"]
-let wisconsin = ["kenosha", "appleton", "eau claire"]
-let wyoming = ["casper", "rock springs", "gillette"]
+function setupData () {
+    allcities = [
+    "abbeville",
+    "acworth",
+    "adairsville",
+    "adel",
+    "adrian",
+    "ailey",
+    "alamo",
+    "alapaha",
+    "albany",
+    "aldora",
+    "allenhurst",
+    "allentown",
+    "alma",
+    "alpharetta",
+    "alston",
+    "alto",
+    "ambrose",
+    "americus",
+    "andersonville",
+    "arabi",
+    "aragon",
+    "arcade",
+    "argyle",
+    "arlington",
+    "arnoldville",
+    "ashburn",
+    "athens",
+    "atlanta",
+    "attapulgus",
+    "auburn",
+    "augusta",
+    "austell",
+    "avalon",
+    "avera",
+    "avondale estates",
+    "alachua",
+    "alford",
+    "altamonte springs",
+    "altha",
+    "anna maria",
+    "apalachicola",
+    "apopka",
+    "arcadia",
+    "archer",
+    "astatula",
+    "atlantic beach",
+    "atlantis",
+    "auburndale",
+    "aventura",
+    "avon park"
+    ]
+    florida = [
+    "alachua",
+    "alford",
+    "altamonte springs",
+    "altha",
+    "anna maria",
+    "apalachicola",
+    "apopka",
+    "arcadia",
+    "archer",
+    "astatula",
+    "atlantic beach",
+    "atlantis",
+    "auburndale",
+    "aventura",
+    "avon park"
+    ]
+}
+function find (cities: any[], city: string) {
+    if (true) {
+        correctState = 0
+    }
+    return correctState
+}
+function randomcity () {
+    cityfound = allcities._pickRandom()
+}
+let correctState = 0
+let florida: string[] = []
+let allcities: string[] = []
+let alabama: number[] = []
+let cityfound = ""
+setupData()
+randomcity()
+let statetofind = game.askForString("Is" + cityfound + "in Florida?")
+find(alabama, statetofind)
