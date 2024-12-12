@@ -70,20 +70,26 @@ function setupData () {
     ]
 }
 function find (cities: any[], city: string) {
-    if (true) {
-        correctState = 0
+    for (let value of florida) {
+        if (cityfound.compare(value) == 0 && controller.A.isPressed()) {
+            message = "Correct"
+            break;
+        } else if (cityfound.compare(value) == 1 && controller.B.isPressed()) {
+            message = "Incorrect"
+            break;
+        }
     }
-    return correctState
+    game.splash(message)
 }
 function randomcity () {
     cityfound = allcities._pickRandom()
 }
-let correctState = 0
+let message = ""
 let florida: string[] = []
 let allcities: string[] = []
-let alabama: number[] = []
 let cityfound = ""
 setupData()
 randomcity()
-let statetofind = game.askForString("Is" + cityfound + "in Florida?")
-find(alabama, statetofind)
+game.splash("For Your Response: \"A\" button = YES  and  \"B\" button = NO ")
+pause(150)
+let statetofind = game.askForString("Is " + cityfound + " in Florida?")
