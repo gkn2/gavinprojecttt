@@ -69,27 +69,43 @@ function setupData () {
     "avon park"
     ]
 }
-function find (cities: any[], city: string) {
-    for (let value of florida) {
-        if (cityfound.compare(value) == 0 && controller.A.isPressed()) {
-            message = "Correct"
-            break;
-        } else if (cityfound.compare(value) == 1 && controller.B.isPressed()) {
-            message = "Incorrect"
+function find (cities: string[], targetcity: string) {
+    infl = "No"
+    for (let value of cities) {
+        if (targetcity.compare(value) == 0) {
+            infl = "Yes"
             break;
         }
     }
-    game.splash(message)
+    return infl
+}
+info.onScore(10, function () {
+    game.gameOver(true)
+})
+function Check_Answer () {
+    if (useranswer == infl) {
+        game.splash("Correct")
+        info.changeScoreBy(1)
+    } else {
+        game.splash("Incorrect")
+        game.gameOver(false)
+    }
 }
 function randomcity () {
     cityfound = allcities._pickRandom()
 }
-let message = ""
-let florida: string[] = []
+let infl = ""
 let allcities: string[] = []
+let florida: string[] = []
+let useranswer = ""
 let cityfound = ""
+info.setScore(0)
 setupData()
-randomcity()
-game.splash("For Your Response: \"A\" button = YES  and  \"B\" button = NO ")
-pause(150)
-let statetofind = game.askForString("Is " + cityfound + " in Florida?")
+for (let index = 0; index < 10; index++) {
+    randomcity()
+    story.printDialog("Is " + cityfound + " in Florida?", 80, 30, 50, 150, 15, 1, story.TextSpeed.Slow)
+    story.showPlayerChoices("Yes", "No")
+    useranswer = story.getLastAnswer()
+    find(florida, cityfound)
+    Check_Answer()
+}
